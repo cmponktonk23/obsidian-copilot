@@ -181,6 +181,8 @@ export const VAULT_VECTOR_STORE_STRATEGIES = [
 export const COMMAND_IDS = {
   FIX_GRAMMAR: "fix-grammar-prompt",
   SUMMARIZE: "summarize-prompt",
+  EXPLAIN: "explain-selection-prompt",
+  POLISH: "polish-selection-prompt",
   GENERATE_TOC: "generate-toc-prompt",
   GENERATE_GLOSSARY: "generate-glossary-prompt",
   SIMPLIFY: "simplify-prompt",
@@ -244,6 +246,14 @@ export const DEFAULT_SETTINGS: CopilotSettings = {
     [COMMAND_IDS.SUMMARIZE]: {
       enabled: true,
       name: "Summarize selection",
+    },
+    [COMMAND_IDS.EXPLAIN]: {
+      enabled: true,
+      name: "Explain selection",
+    },
+    [COMMAND_IDS.POLISH]: {
+      enabled: true,
+      name: "Polish selection",
     },
     [COMMAND_IDS.GENERATE_TOC]: {
       enabled: true,

@@ -24,6 +24,14 @@ export function registerBuiltInCommands(plugin: CopilotPlugin) {
     plugin.processSelection(editor, "summarizeSelection");
   });
 
+  addCommandIfEnabled(COMMAND_IDS.EXPLAIN, (editor) => {
+    plugin.processSelection(editor, "explainSelection");
+  });
+
+  addCommandIfEnabled(COMMAND_IDS.POLISH, (editor) => {
+    plugin.processSelection(editor, "polishSelection");
+  });
+
   addCommandIfEnabled(COMMAND_IDS.GENERATE_TOC, (editor) => {
     plugin.processSelection(editor, "tocSelection");
   });

@@ -354,6 +354,20 @@ export function summarizePrompt(selectedText: string): string {
   );
 }
 
+export function explainPrompt(selectedText: string): string {
+  return (
+    `Please explain the following text in a way that a 5-year-old would understand. Output in the same language as the source, do not output English if it is not English:\n\n` +
+    `${selectedText}`
+  );
+}
+
+export function polishPrompt(selectedText: string): string {
+  return (
+    `Please polish the following text so that it is grammatically correct and flows well. Output in the same language as the source, do not output English if it is not English:\n\n` +
+    `${selectedText}`
+  );
+}
+
 export function tocPrompt(selectedText: string): string {
   return (
     `Please generate a table of contents for the following text and return it without any other changes. Output in the same language as the source, do not output English if it is not English:\n\n` +

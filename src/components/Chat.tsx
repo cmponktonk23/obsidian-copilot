@@ -27,6 +27,8 @@ import {
   rewriteTweetThreadSelectionPrompt,
   simplifyPrompt,
   summarizePrompt,
+  explainPrompt,
+  polishPrompt,
   tocPrompt,
 } from "@/utils";
 import { MarkdownView, Notice, TFile } from "obsidian";
@@ -413,6 +415,8 @@ ${chatContent}`;
 
   useEffect(createEffect("fixGrammarSpellingSelection", fixGrammarSpellingSelectionPrompt), []);
   useEffect(createEffect("summarizeSelection", summarizePrompt), []);
+  useEffect(createEffect("explainSelection", explainPrompt), []);
+  useEffect(createEffect("polishSelection", polishPrompt), []);
   useEffect(createEffect("tocSelection", tocPrompt), []);
   useEffect(createEffect("glossarySelection", glossaryPrompt), []);
   useEffect(createEffect("simplifySelection", simplifyPrompt), []);

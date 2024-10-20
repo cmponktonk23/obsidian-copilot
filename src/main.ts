@@ -565,6 +565,24 @@ export default class CopilotPlugin extends Plugin {
   addContextMenu = (menu: Menu, editor: Editor, plugin: this): void => {
     menu.addItem((item) => {
       item
+        .setTitle("Copilot: Polish Selection")
+        .setIcon("bot")
+        .onClick(async (e) => {
+          plugin.processSelection(editor, "polishSelection");
+        });
+    });
+
+    menu.addItem((item) => {
+      item
+        .setTitle("Copilot: Explain Selection")
+        .setIcon("bot")
+        .onClick(async (e) => {
+          plugin.processSelection(editor, "explainSelection");
+        });
+    });
+
+    menu.addItem((item) => {
+      item
         .setTitle("Copilot: Summarize Selection")
         .setIcon("bot")
         .onClick(async (e) => {
