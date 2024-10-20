@@ -29,3 +29,15 @@ jobs:
       - run: npm run lint
       - run: npm run build --if-present
       - run: npm test
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifacts
+          path: |
+            dist/
+            build/
+            main.js
+            manifest.json
+            styles.css
+          retention-days: 1
